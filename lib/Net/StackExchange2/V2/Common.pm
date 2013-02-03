@@ -12,7 +12,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(query no_params one_param two_params);
 
 
-our $VERSION = '0.01';
+our $VERSION = "0.05";
 
 sub query {
 	my $queryStrHash = pop @_;
@@ -40,12 +40,13 @@ sub query {
 }
 sub query_post {
 	my $queryStrHash = pop @_;
-	print Dumper(%$queryStrHash);
+#	print Dumper(%$queryStrHash);
+#for the purposes of POST we need all the excess query str stuff to go into POST form data
 	my $url = join("/",@_);
 	my $finalUrl = BASE_URL.$url;
 	print $finalUrl;
 	my $ua = LWP::UserAgent->new;
-	#apprently the second param in the post has to be a hash inside an array
+	#apprantly the second param in the post has to be a hash inside an array
 	my $response = $ua->post($finalUrl, [%$queryStrHash]);
 	return	decode_json($response->decoded_content);
 }
@@ -160,7 +161,7 @@ __END__
 
 =head1 NAME
 
-Internal module used to create urls
+Net::StackExchange2::V2::Common - Internal module used to create urls
 
 =head1 VERSION
 
@@ -170,15 +171,7 @@ Version 0.01
 
 =head1 SYNOPSIS
 
-
-=head1 Description
-
-Access Tokens
-
-=head2 Methods
-
-=head3 method1
-
+This module is an internal set of common methods that are used to generate urls. The methods generate an anonymous method that actually makes the call.
 
 =head1 AUTHOR
 

@@ -1,4 +1,4 @@
-Net-StackExchange2
+Net-StackExchange2-
 
 This module is a perl wrapper to the stack exchange api. It mostly has a one to one mapping with the api methods documented here : http://api.stackexchange.com/docs
 

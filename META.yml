@@ -8,7 +8,7 @@ configure_requires:
   ExtUtils::MakeMaker: 0
 dynamic_config: 1
 generated_by: 'ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.120921'
-license: open_source
+license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -23,7 +23,5 @@ requires:
   Sub::Name: 0.05
   perl: 5.006
 resources:
-  x_Type: git
-  x_Url: git://github.com/gideondsouza/perl-net-stackexchange.git
-  x_Web: https://github.com/gideondsouza/perl-net-stackexchange/
-version: 0.01
+  repository: https://github.com/gideondsouza/perl-net-stackexchange/
+version: 0.05

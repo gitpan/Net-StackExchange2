@@ -6,7 +6,7 @@ use warnings FATAL => 'all';
 use Sub::Name qw(subname);
 use Net::StackExchange2::V2::Common qw(query no_params one_param);
 
-our $VERSION = '0.01';
+our $VERSION = "0.05";
 
 sub new {
 	my ($class, $params) = @_;
@@ -15,7 +15,7 @@ sub new {
 
 	*sites_all = subname(
 	   "Net::StackExchange2::V2::Sites::sites_all",
-	   no_params("sites"),
+	   no_params("sites", {no_site => 1}),
 	);
     return $self;
 }
@@ -25,7 +25,7 @@ __END__
 
 =head1 NAME
 
-StackExchange Sites
+Net::StackExchange2::V2::Sites - Sites
 
 =head1 VERSION
 

@@ -8,7 +8,7 @@ WriteMakefile(
     AUTHOR           => q{Gideon Israel Dsouza <gideon@cpan.org>},
     VERSION_FROM     => 'lib/Net/StackExchange2.pm',
     ABSTRACT_FROM    => 'lib/Net/StackExchange2.pm',
-    LICENSE          => 'freebsd',
+    LICENSE          => 'bsd',
     PL_FILES         => {},
     MIN_PERL_VERSION => 5.006,
     CONFIGURE_REQUIRES => {
@@ -25,10 +25,8 @@ WriteMakefile(
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'Net-StackExchange2-*' },
 	META_MERGE        => {
-	     resources => {
-			url  => 'git://github.com/gideondsouza/perl-net-stackexchange.git',
-			web  => 'https://github.com/gideondsouza/perl-net-stackexchange/',
-		    type => 'git',
-	     },
-	},
+	     resources =>  {	
+	 			repository => 'https://github.com/gideondsouza/perl-net-stackexchange/',
+			},
+	}
 );

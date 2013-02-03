@@ -6,7 +6,7 @@ use warnings FATAL => 'all';
 use Sub::Name qw(subname);
 use Net::StackExchange2::V2::Common qw(query no_params one_param);
 
-our $VERSION = '0.01';
+our $VERSION = "0.05";
 
 sub new {
 	my ($class, $params) = @_;
@@ -36,7 +36,7 @@ __END__
 
 =head1 NAME
 
-StackExchange Comments
+Net::StackExchange2::V2::Comments - Comments
 
 =head1 VERSION
 
